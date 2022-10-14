@@ -14,7 +14,7 @@ root.render(
   <React.StrictMode>
     <ColorModeScript />
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 )
 
 // If you want your app to work offline and load faster, you can change

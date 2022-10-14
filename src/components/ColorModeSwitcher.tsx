@@ -1,4 +1,4 @@
-import * as React from "react"
+
 import {
   useColorMode,
   useColorModeValue,
@@ -22,6 +22,7 @@ export const ColorModeSwitcher: React.FC<ColorModeSwitcherProps> = (props) => {
       color="current"
       marginLeft="2"
       onClick={toggleColorMode}
+      initialColorMode="dark"
       icon={<SwitchIcon />}
       aria-label={`Switch to ${text} mode`}
       {...props}
