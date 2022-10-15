@@ -7,6 +7,8 @@ import theme from "./assets/theme"
 import Home from "./Home"
 import About from "./About"
 import Skills from "./Skills"
+import Projects from "./Projects"
+import Contact from "./Contact"
 
 
 export const App = () => (
@@ -15,7 +17,9 @@ export const App = () => (
       <Nav />
       <Home />
       <About />
+      <Projects />
       <Skills />
+      <Contact/>
     </Box>
   </ChakraProvider>
 )

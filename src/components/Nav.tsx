@@ -14,7 +14,6 @@ import {
 import {
   HamburgerIcon,
   CloseIcon,
-  ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 import logoImg from '../assets/logo.png';
@@ -172,7 +171,7 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Home',
+    label: 'Home'
   },
   {
     label: 'About',
@@ -180,10 +179,14 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Projects',
-    href: '#projects',
+    href: '#projects'
   },
   {
     label: 'My Skills',
-    href: '#skills',
+    href: '#skills'
   },
+  {
+    label: 'Contact',
+    href: '#contact'
+  }
 ];
