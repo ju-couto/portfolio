@@ -7,12 +7,11 @@ import {
     IconButton,
     Button,
     VStack,
-    HStack,
-    Wrap,
-    WrapItem,
+
     FormControl,
     FormLabel,
     Input,
+    useColorModeValue,
     InputGroup,
     InputLeftElement,
     Textarea,
@@ -26,10 +25,10 @@ import {
   } from 'react-icons/md';
   import {  BsPerson } from 'react-icons/bs';
   
-  export default function contact() {
+ const Contact = () => {
     return (
       <Container  maxW="100%"  
-      p={{ sm: 5, md: 5, lg: 16 }}  overflow="hidden" color="white">
+      p={{ sm: 5, md: 5, lg: 16 }}  backgroundColor={useColorModeValue('#D6D6D6', 'rgba(18, 18, 18, 0.6)')} overflow="hidden" color="white">
 
                     <Heading>Contact</Heading>
                     <Box m={8} >
@@ -80,4 +79,6 @@ import {
       </Container>
     );
   }
+export default Contact;
+
   

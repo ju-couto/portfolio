@@ -23,7 +23,7 @@ import git from './assets/technologies/git.png';
 
 const Skills = () => {
     return (
-        <Container id='skills' maxWidth={'100%'} p="5" backgroundColor={useColorModeValue('white', 'rgba(18, 18, 18, 0.6)')}>
+        <Container id='skills' maxWidth={'100%'} p="5"  backgroundColor={useColorModeValue('white', '#282828')}>
             <Heading as="h2" p={5} fontSize={{ base: 'xx-large', lg: 'xxx-large' }}>
                 My Skills
             </Heading>
@@ -31,7 +31,6 @@ const Skills = () => {
                 display="flex"
                 flexDirection="column"
                 alignItems="center">
-
                 <Wrap spacing='20px' justify='center'>
                     <WrapItem>
                         <Image src={htmlWhite} width={136} height={136} m={10} />
