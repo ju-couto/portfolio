@@ -5,6 +5,7 @@ import {
   IconButton,
   Button,
   Stack,
+  Image,
   Collapse,
   Icon,
   Link,
@@ -29,12 +30,13 @@ export default function WithSubnavigation() {
         position="fixed"
         width="100%"
         zIndex="100"
-        bg={useColorModeValue('#D6D6D6', 'rgba(18, 18, 18, 0.6)')}
+        bg={useColorModeValue('#D6D6D6', 'rgba(18, 18, 18)')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
         py={{ base: 1 }}
         px={{ base: 4 }}
         align={'center'}>
+          
         <Flex
           flex={{ base: 1, md: 'auto' }}
 
@@ -49,15 +51,15 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'left' }}>
-          <img src={logoImg} width={100} ></img>
+          <Image src={logoImg} width={100} />
         </Flex>
         <Flex display={{ base: 'none', md: 'flex' }} >
           <DesktopNav />
-          <ColorModeSwitcher />
+        
         </Flex>
-
       </Flex>
-      <Collapse in={isOpen} animateOpacity>
+
+      <Collapse in={isOpen} animateOpacity>      
         <MobileNav />
       </Collapse>
     </Box>
@@ -65,7 +67,7 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = () => {
-
+  const color = useColorModeValue('black', 'white');
   return (
     <Stack
       flex={{ base: 1, md: 0 }}
@@ -76,6 +78,7 @@ const DesktopNav = () => {
       {NAV_ITEMS.map((navItem) => (
         <Button
           as={'a'}
+          color={color}
           fontSize={'md'}
           fontWeight={500}
           variant={'link'}
@@ -84,56 +87,33 @@ const DesktopNav = () => {
         </Button>
 
       ))}
+          <ColorModeSwitcher  />
+
 
     </Stack>
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
-  return (
-    <Link
-      href={href}
-      role={'group'}
-      display={'block'}
-      p={2}
-      rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
-      <Stack direction={'row'} align={'center'}>
-        <Box>
-          <Text
-            transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
-            fontWeight={500}>
-            {label}
-          </Text>
-          <Text fontSize={'sm'}>{subLabel}</Text>
-        </Box>
-        <Flex
-          transition={'all .3s ease'}
-          transform={'translateX(-10px)'}
-          opacity={0}
-          _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-          justify={'flex-end'}
-          align={'center'}
-          flex={1}>
-          <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </Link>
-  );
-};
+
 
 const MobileNav = () => {
   return (
     <Stack
+    position="fixed"
+
+    zIndex="100"
       bg={useColorModeValue('white', 'gray.800')}
       p={4}
+      top={2}
+      shadow="lg"
+      borderBottomRightRadius="20px"
       mt={100}
       display={{ md: 'none' }}>
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem
           key={navItem.label} {...navItem} />
       ))}
+      <ColorModeSwitcher />
     </Stack>
   );
 };
@@ -146,6 +126,7 @@ const MobileNavItem = ({ label, href }: NavItem) => {
       <Flex
         py={2}
         as={Link}
+        
         href={href ?? '#'}
         justify={'space-between'}
         align={'center'}
@@ -157,8 +138,9 @@ const MobileNavItem = ({ label, href }: NavItem) => {
           color={useColorModeValue('gray.600', 'gray.200')}>
           {label}
         </Text>
-
+       
       </Flex>
+     
     </Stack>
   );
 };

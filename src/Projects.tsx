@@ -42,9 +42,9 @@ interface Project {
 }
  const PROJECTS : Array<Project> = [
     {
-        title: 'Project 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum et ratione eius ab, aperiam dolore commodi officia corrupti laudantium saepe dolorem quis nostrum corporis molestias nesciunt rerum itaque accusamus minima.',
-        technologies: ['react', 'vue'],
+        title: 'Movie Time',
+        description: 'This app will help you to find your next movie to watch. A database with rating, actors and anything you need to know about the movie.',
+        technologies: ['react', 'typescript'],
         github: 'https://www.google.com'
     },
     {

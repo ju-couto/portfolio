@@ -17,6 +17,7 @@ export const ColorModeSwitcher: React.FC<ColorModeSwitcherProps> = (props) => {
   return (
     <IconButton
       size="md"
+      display={{ base: "flex", md: "inline-flex" }}
       fontSize="lg"
       variant="ghost"
       color="current"

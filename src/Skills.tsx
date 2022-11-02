@@ -6,11 +6,10 @@ import {
     WrapItem,
     useColorModeValue,
     Container,
+    Tooltip,
 } from '@chakra-ui/react';
-import htmlWhite from './assets/technologies/html-white.png';
-import htmlBlack from './assets/technologies/html-black.png';
-import cssWhite from './assets/technologies/css-white.png';
-import cssBlack from './assets/technologies/css-black.png';
+import html from './assets/technologies/html-black.png';
+import css from './assets/technologies/css-black.png';
 import js from './assets/technologies/js.png';
 import ts from './assets/technologies/ts.png';
 import react from './assets/technologies/react.png';
@@ -22,6 +21,7 @@ import git from './assets/technologies/git.png';
 
 
 const Skills = () => {
+
     return (
         <Container id='skills' maxWidth={'100%'} p="5"  backgroundColor={useColorModeValue('white', '#282828')}>
             <Heading as="h2" p={5} fontSize={{ base: 'xx-large', lg: 'xxx-large' }}>
@@ -32,44 +32,33 @@ const Skills = () => {
                 flexDirection="column"
                 alignItems="center">
                 <Wrap spacing='20px' justify='center'>
-                    <WrapItem>
-                        <Image src={htmlWhite} width={136} height={136} m={10} />
-                    </WrapItem>
-                    <WrapItem>
-                        <Image src={cssWhite} width={136} height={136} m={10} />
-                    </WrapItem>
-                    <WrapItem>
-                        <Image src={js} width={136} height={136} m={10} />
-                    </WrapItem>
-                    <WrapItem>
-                        <Image src={ts} width={136} height={136} m={10} />
-
-                    </WrapItem>
-                    <WrapItem>
-                        <Image src={react} width={136} height={136} m={10} />
-                    </WrapItem>
-                    <WrapItem>
-                        <Image src={vue} width={136} height={136} m={10} />
-
-                    </WrapItem>
+                    {SKILLS_FRONT.map((skill:any) => (
+                        
+                        <Tooltip hasArrow label={skill.name} >                        
+                        <WrapItem>
+                            <Image src={skill.image} width={136} height={136} m={10} />
+                        </WrapItem>
+                        </Tooltip>
+                    ))}
                 </Wrap>
                 <Wrap spacing='20px' justify='center'>
+                    {SKILLS_BACK.map((skill:any) => (
+                          <Tooltip hasArrow label={skill.name} >               
+                        <WrapItem>
+                            <Image src={skill.image} width={136} height={136} m={10} />
+                        </WrapItem>
+                        </Tooltip>
 
-                    <WrapItem>
-                        <Image src={sql} width={136} height={136} m={10} />
-                    </WrapItem>
-                    <WrapItem>
-                        <Image src={python} width={136} height={136} m={10} />
-                    </WrapItem>
-                    <WrapItem>
-                        <Image src={java} width={136} height={136} m={10} />
-                    </WrapItem>
+                    ))}
                 </Wrap>
                 <Wrap spacing='20' justify='center'>
-                    <WrapItem>
-                        <Image src={git} width={136} height={136} m={10} />
-
-                    </WrapItem>
+                    {SKILLS_OTHER.map((skill:any) => (
+                            <Tooltip hasArrow label={skill.name} >
+                        <WrapItem>
+                            <Image src={skill.image} width={136} height={136} m={10} />
+                        </WrapItem>
+                        </Tooltip>
+                    ))}
 
                 </Wrap>
             </Box>
@@ -78,3 +67,52 @@ const Skills = () => {
     )
 }
 export default Skills;
+
+const SKILLS_FRONT = [
+    {
+        name: 'HTML5',
+        image: html
+    },
+    {
+        name: 'CSS3',
+        image: css    
+    },
+    {
+        name: 'JavaScript',
+        image: js,
+    },  
+    {
+        name: 'TypeScript',
+        image: ts,
+    },
+    {
+        name: 'React.js',
+        image: react,
+    },
+    {
+        name: 'Vue.js',
+        image: vue,
+    }
+]
+
+const SKILLS_BACK = [
+    {
+        name: 'SQL',
+        image: sql,
+    },
+    {
+        name: 'Python',
+        image: python,
+    },
+    {
+        name: 'Java',
+        image: java,
+    }
+]
+
+const SKILLS_OTHER = [
+    {
+        name: 'Git',
+        image: git
+    }
+]

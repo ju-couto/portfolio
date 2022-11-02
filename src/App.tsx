@@ -17,10 +17,9 @@ export const App = () => (
       <Nav />
       <Home />
       <About />
-    
       <Projects />
       <Skills />
-      <Contact/>
+      <Contact />
     </Box>
   </ChakraProvider>
 )

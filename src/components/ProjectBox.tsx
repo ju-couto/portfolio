@@ -7,13 +7,25 @@ interface ProjectBoxProps {
     website?: string;
     github?: string;
 }
-
+function ButtonInfo(href: string, text: string) {
+    return (
+        <Link
+            href={href}
+            style={{ textDecoration: 'none', cursor: 'pointer' }}
+            isExternal>
+            <Box mt={5} textAlign={"center"} p={2} bg={useColorModeValue('blackAlpha.300', 'blackAlpha.700')}
+                color={useColorModeValue('whiteAlpha.900', 'whiteAlpha.700')}
+                borderRadius={4}
+                transition="0.5s"
+                _hover={useColorModeValue({ borderColor: 'gray', color: 'white', bg: 'blackAlpha.800' }, { borderColor: 'gray', color: 'white', bg: 'whiteAlpha.400' })}
+                borderWidth='2px'
+            >
+                {text}
+            </Box></Link>
+    )
+}
 
 export default function ProjectBox(props: ProjectBoxProps) {
-    const colorWebsite = useColorModeValue('whiteAlpha.900', 'whiteAlpha.700'),
-        bgWebsite = useColorModeValue('blackAlpha.300', 'blackAlpha.700'),
-        hoverWebsite = useColorModeValue({ borderColor: 'gray', color: 'white', bg: 'blackAlpha.800' }, { borderColor: 'gray', color: 'white', bg: 'whiteAlpha.400' })
-
     return (
         <Stat
             textAlign={'left'}
@@ -27,7 +39,7 @@ export default function ProjectBox(props: ProjectBoxProps) {
             py={'5'}>
             <Heading fontSize='xl'>{props.title}</Heading>
             <Text mt={4}>{props.description}</Text>
-            <Box display={'flex'}>
+            <Box display={{ base: "", lg: 'inline-flex' }} >
                 {props.technologies.map(technologie => {
                     let tech = TECHNOLOGIES.find(item => item.title === technologie)
                     return (
@@ -36,34 +48,8 @@ export default function ProjectBox(props: ProjectBoxProps) {
                         </Box>)
                 })}
             </Box>
-            {props.website && <Link
-                href={props.website}
-                style={{ textDecoration: 'none', cursor: 'pointer' }}
-                isExternal>
-                <Box mt={5} textAlign={"center"} p={2} bg={bgWebsite}
-                    color={colorWebsite}
-                    borderRadius={4}
-                    transition="0.5s"
-                    _hover={hoverWebsite}
-                    borderWidth='2px'
-                >
-                    Visit the WebSite
-                </Box></Link>}
-            {props.github && <Link
-                href={props.github}
-                style={{ textDecoration: 'none', cursor: 'pointer' }}
-                isExternal>
-                <Box mt={5} textAlign={"center"} p={2} bg={bgWebsite}
-                    color={colorWebsite}
-                    borderRadius={4}
-                    transition="0.5s"
-                    _hover={hoverWebsite}
-                    borderWidth='2px'>
-                        Github Repositorie
-                    </Box>
-            </Link>}
-
-
+            {props.website && ButtonInfo(props.website, "Visit the Website")}
+            {props.github && ButtonInfo(props.github, "Github Repository")}
         </Stat>
     )
 }
