@@ -15,6 +15,8 @@ const config: Config = {
       },
       fontFamily: {
         azeret: ['Azeret Mono', 'monospace'],
+        oswald: ['Oswald', 'sans-serif'],
+        cabin: ['Cabin', 'sans-serif'],
       }
     },
   },

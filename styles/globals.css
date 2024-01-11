@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.failure-shadow{
+    text-shadow: rgb(7, 212, 212) 1.5px 2px 0px, rgb(255, 0, 255) 1.5px -2.1px 0px;
+}
+
+.text-glitter{
+    filter: drop-shadow(rgba(219, 0, 255, 0.95) 0px 0px 0.376996px) drop-shadow(rgba(219, 0, 255, 0.75) 0px 0px 1.88498px) drop-shadow(rgba(219, 0, 255, 0.44) 0px 0px 5.65494px);
+    --color-override: rgb(245,183,255);
+}
+
+
+@layer components{
+    .nav-link{
+        @apply font-cabin font-bold text-white text-lg w-fit cursor-pointer relative md:block after:block after:content-[''] 
+        after:absolute after:h-[3px] after:bg-purple-400 after:w-full after:scale-x-0 after:hover:scale-x-100 
+        after:transition after:duration-300 after:origin-center hidden
+    }
+
+    .nav-link-mobile{
+        @apply font-cabin mb-[2rem] text-white font-bold text-3xl w-fit cursor-pointer relative md:block after:block after:content-[''] 
+        after:absolute after:h-[3px] after:bg-purple-400 after:w-full after:scale-x-0 after:hover:scale-x-100 
+        after:transition after:duration-300 after:origin-center 
+    }
+}
