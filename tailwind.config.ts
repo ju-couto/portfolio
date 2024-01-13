@@ -4,6 +4,7 @@ const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './sections/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -17,6 +18,10 @@ const config: Config = {
         azeret: ['Azeret Mono', 'monospace'],
         oswald: ['Oswald', 'sans-serif'],
         cabin: ['Cabin', 'sans-serif'],
+        opensans: ['Open Sans', 'sans-serif'],
+      },
+      boxShadow: {
+        hobby: '3px 3px #852CD6',
       }
     },
   },
