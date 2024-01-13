@@ -9,7 +9,7 @@ const MobileMenu = ({ nav, closeMenu }: Props) => {
   const animation = nav ? "translate-x-0" : "translate-x-[100%]";
   return (
     <div
-      className={`fixed ${animation} transform translation-all duration-300 top-0 right-0 left-0 bottom-0 z-[10000] bg-[#300754]`}
+      className={`fixed ${animation} transform translation-all duration-300 top-0 right-0 left-0 bottom-0 z-[10000] bg-purple-dark`}
     >
       <div className="w-[100vw] h-[100vh] flex flex-col items-center justify-center">
         <div className="nav-link-mobile">HOME</div>

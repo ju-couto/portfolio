@@ -29,8 +29,8 @@
   }
 
   .card-hobby {
-    @apply bg-[#4B276B] md:h-[5.5rem]  md:w-[5.5rem]  h-[4rem] w-[4rem] flex justify-center  items-center flex-col rounded-xl shadow-hobby  border-[1px] border-[#852CD6] 
-    hover:border-[#4B276B] hover:shadow-none  transition duration-300 ease-in-out uppercase text-sm font-bold md:gap-1;
+    @apply bg-deep-purple md:h-[5.5rem]  md:w-[5.5rem]  h-[4rem] w-[4rem] flex justify-center  items-center flex-col rounded-xl shadow-hobby  border-[1px] border-violet 
+    hover:border-deep-purple hover:shadow-none  transition duration-300 ease-in-out uppercase text-sm font-bold md:gap-1;
   }
 
   .icon-hobby{
@@ -39,6 +39,10 @@
 
   .tooltip {
     @apply text-glitter invisible scale-0 group-hover:visible transition duration-300 ease-in-out group-hover:scale-100
+  }
+
+  .section {
+    @apply flex py-20 items-center px-9
   }
 
 }
