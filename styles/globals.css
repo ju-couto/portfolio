@@ -15,6 +15,12 @@
   --color-override: rgb(245, 183, 255);
 }
 
+@layer base{
+  html {
+    @apply scroll-smooth;
+  }
+}
+
 @layer components {
   .nav-link {
     @apply font-cabin font-bold text-white text-lg w-fit cursor-pointer relative md:block after:block after:content-[''] 

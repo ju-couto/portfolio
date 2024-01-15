@@ -5,7 +5,7 @@ const Skills = () => {
   const skillsData = [
     { imgSrc: "/images/icons/html.svg", altText: "html", tooltipText: "HTML" },
     { imgSrc: "/images/icons/css.svg", altText: "css", tooltipText: "CSS" },
-    { imgSrc: "/images/icons/js.svg", altText: "js", tooltipText: "JS" },
+    { imgSrc: "/images/icons/js.svg", altText: "js", tooltipText: "JavaScript" },
     {
       imgSrc: "/images/icons/ts.svg",
       altText: "ts",
@@ -15,6 +15,11 @@ const Skills = () => {
       imgSrc: "/images/icons/react.svg",
       altText: "react",
       tooltipText: "React",
+    },
+    {
+      imgSrc: "/images/icons/next-js.svg",
+      altText: "next",
+      tooltipText: "Next",
     },
     {
       imgSrc: "/images/icons/node-js.svg",
@@ -52,12 +57,12 @@ const Skills = () => {
   ];
 
   return (
-    <div className="bg-purple-darker md:py-[7rem]  text-white section">
+    <div className="bg-purple-darker md:py-[7rem]  text-white section" id="skills">
       <div className="mx-auto w-[80%] flex flex-col items-center">
-        <h2 className="text-cabin text-4xl md:text-5xl uppercase font-extrabold">
+        <h2 className="text-cabin text-4xl md:text-5xl uppercase font-extrabold" data-aos="fade-down">
           SKILLS
         </h2>
-        <div className="flex flex-wrap justify-center gap-4 mt-10">
+        <div className="flex flex-wrap justify-center gap-4 mt-10" data-aos="fade-up">
           {skillsData.map((skill, index) => (
             <SkillItem key={index} {...skill} />
           ))}

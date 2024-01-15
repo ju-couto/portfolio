@@ -31,7 +31,8 @@ const config: Config = {
         'purple-light': '#8B56BB',
         'violet': '#852CD6',
         'deep-purple': '#4B276B',
-        'purple-blue': '#683299'
+        'purple-blue': '#683299',
+        'midnight-indigo': '#471F79',
       },
     },
   },

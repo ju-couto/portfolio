@@ -38,12 +38,12 @@ interface ProjectCardProps {
         {(githubLink || projectLink) && (
           <div className="invisible absolute bottom-0 w-full flex justify-center items-center gap-4 pb-4 h-full bg-purple-950  rounded-lg group-hover:visible transition-all duration-300 ease-in-out opacity-90">
             {projectLink && (
-              <button className="p-2 rounded-full bg-purple-700 h-fit hover:scale-110 transition-all duration-300 ease-in-out opacity-70 hover:opacity-100">
+              <button className="p-2 rounded-full bg-purple-700 h-fit hover:scale-110  hover:transition-all hover:duration-300  hover:ease-in-out opacity-70 hover:opacity-100">
                 <MdRemoveRedEye className="w-6 h-6" />
               </button>
             )}
             {githubLink && (
-              <button className="p-2 rounded-full bg-purple-700 h-fit hover:scale-110 transition-all duration-300 ease-in-out opacity-70 hover:opacity-100">
+              <button className="p-2 rounded-full bg-purple-700 h-fit hover:scale-110  hover:transition-all  hover:duration-300  hover:ease-in-out opacity-70 hover:opacity-100">
                 <img
                   src="/images/icons/github.svg"
                   alt="github"
