@@ -2,23 +2,26 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
 const Contact = () => {
-  const [isSent, setIsSent] = useState<Boolean>(false);
+  const [isSent, setIsSent] = useState<Boolean | null>(null);
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
+
   useEffect(() => {
-    if (isSent) {
+    if (isSent !== null) {
       const timer = setTimeout(() => {
-        setIsSent(false);
-        setFormValues({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
+        if (isSent) {
+          setFormValues({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        }
+        setIsSent(null);
       }, 2000);
 
       return () => {
@@ -56,10 +59,12 @@ const Contact = () => {
       setIsSent(true);
     } catch (error: any) {
       console.log(
-        "There was a problem with the fetch request: " + error.message
+        "There was a problem with the fetch request: " + error.message,
       );
+      setIsSent(false);
     }
   };
+
   return (
     <div
       className="section bg-purple-darker text-white justify-center flex-col w-full relative"
@@ -142,8 +147,12 @@ const Contact = () => {
               Send
             </button>
           </form>
-          <Transition.Root show={isSent as boolean} as={Fragment}>
-            <Dialog as="div" className="relative z-[10000]" onClose={setIsSent}>
+          <Transition.Root show={isSent !== null} as={Fragment}>
+            <Dialog
+              as="div"
+              className="relative z-[10000]"
+              onClose={() => setIsSent(null)}
+            >
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -173,14 +182,15 @@ const Contact = () => {
                           <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                             <Dialog.Title
                               as="h3"
-                              className="text-lg font-bold leading-6 text-white"
+                              className={`text-lg font-bold leading-6 text-white`}
                             >
-                              Message Sent!
+                              {isSent ? "Message Sent!" : "Error!"}
                             </Dialog.Title>
                             <div className="mt-2">
                               <p className="text-sm text-gray-200">
-                                Your message was sent successfully. I'll get
-                                back to you soon.
+                                {isSent
+                                  ? "Your message was sent successfully. I'll get back to you soon."
+                                  : "There was an error sending your message. Please try again later."}
                               </p>
                             </div>
                           </div>
