@@ -7,8 +7,16 @@ import Projects from "@/sections/Projects";
 import Contact from "@/sections/Contact";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
+import { GetStaticPropsContext } from "next";
 
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: (await import(`../messages/${locale}.json`)).default,
+    },
+  };
+}
 
 const Index = () => {
   const [nav, setNav] = useState(false);

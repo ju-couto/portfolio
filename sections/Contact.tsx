@@ -1,8 +1,20 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
+import {
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  Transition,
+  TransitionChild,
+} from "@headlessui/react";
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+  const t = useTranslations("Contact");
   const [isSent, setIsSent] = useState<Boolean | null>(null);
+  const [notification, setNotification] = useState({
+    title: "",
+    description: "",
+  });
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
@@ -57,11 +69,19 @@ const Contact = () => {
       }
 
       setIsSent(true);
+      setNotification({
+        title: t("success"),
+        description: t("sucessText"),
+      });
     } catch (error: any) {
       console.log(
         "There was a problem with the fetch request: " + error.message,
       );
       setIsSent(false);
+      setNotification({
+        title: t("error"),
+        description: t("errorText"),
+      });
     }
   };
 
@@ -74,7 +94,7 @@ const Contact = () => {
         className="text-cabin text-4xl md:text-5xl uppercase font-extrabold "
         data-aos="fade-up"
       >
-        Contact me
+        {t("title")}
       </h3>
       <div className="md:w-[40rem] w-[18rem] text-lg justify-center">
         <>
@@ -90,7 +110,7 @@ const Contact = () => {
               maxLength={200}
               name="name"
               id="name"
-              placeholder="Name"
+              placeholder={t("nameForm")}
               className="py-3 px-4 bg-midnight-indigo rounded-md text-purple-200"
               value={formValues.name}
               onChange={(e) =>
@@ -118,7 +138,7 @@ const Contact = () => {
               required
               minLength={5}
               maxLength={100}
-              placeholder="Subject"
+              placeholder={t("subjectForm")}
               className="py-3 px-4 bg-midnight-indigo rounded-md text-purple-200"
               value={formValues.subject}
               onChange={(e) =>
@@ -133,7 +153,7 @@ const Contact = () => {
               required
               minLength={10}
               maxLength={200}
-              placeholder="Message"
+              placeholder={t("messageForm")}
               className="py-3 h-40 md:h-full px-4 bg-midnight-indigo rounded-md text-purple-200"
               value={formValues.message}
               onChange={(e) =>
@@ -144,16 +164,16 @@ const Contact = () => {
               type="submit"
               className="border-violet border-2 rounded-md p-3 font-medium hover:bg-purple-blue hover:scale-105 hover:text-white transition-all duration-300 ease-in-out w-60 md:self-end self-center"
             >
-              Send
+              {t("send")}
             </button>
           </form>
-          <Transition.Root show={isSent !== null} as={Fragment}>
+          <Transition show={isSent !== null} as={Fragment}>
             <Dialog
               as="div"
               className="relative z-[10000]"
               onClose={() => setIsSent(null)}
             >
-              <Transition.Child
+              <TransitionChild
                 as={Fragment}
                 enter="ease-out duration-300"
                 enterFrom="opacity-0"
@@ -163,11 +183,11 @@ const Contact = () => {
                 leaveTo="opacity-0"
               >
                 <div className="fixed inset-0 bg-gray-800 bg-opacity-75 transition-opacity" />
-              </Transition.Child>
+              </TransitionChild>
 
               <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
                 <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                  <Transition.Child
+                  <TransitionChild
                     as={Fragment}
                     enter="ease-out duration-300"
                     enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
@@ -176,32 +196,30 @@ const Contact = () => {
                     leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                     leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                   >
-                    <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-purple-900 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg font-opensans">
+                    <DialogPanel className="relative transform overflow-hidden rounded-lg bg-purple-900 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg font-opensans">
                       <div className="bg-purple-900 px-4 pb-5 pt-6 sm:p-6 sm:pb-4">
                         <div className="sm:flex sm:items-start">
                           <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                            <Dialog.Title
+                            <DialogTitle
                               as="h3"
                               className={`text-lg font-bold leading-6 text-white`}
                             >
-                              {isSent ? "Message Sent!" : "Error!"}
-                            </Dialog.Title>
+                              {notification.title}
+                            </DialogTitle>
                             <div className="mt-2">
                               <p className="text-sm text-gray-200">
-                                {isSent
-                                  ? "Your message was sent successfully. I'll get back to you soon."
-                                  : "There was an error sending your message. Please try again later."}
+                                {notification.description}
                               </p>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </Dialog.Panel>
-                  </Transition.Child>
+                    </DialogPanel>
+                  </TransitionChild>
                 </div>
               </div>
             </Dialog>
-          </Transition.Root>
+          </Transition>
         </>
       </div>
     </div>

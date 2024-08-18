@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
 const Home = () => {
+  const t = useTranslations("Home");
+
   return (
     <div
       className="h-[88vh] bg-[url('/images/banner.jpg')] bg-cover bg-center flex items-center justify-center"
@@ -18,15 +21,19 @@ const Home = () => {
           alt="profile"
           className="absolute bottom-[10rem] md:bottom-[12rem] rounded-full h-[250px] sm:w-[250px]  border-4 border-fuchsia"
         />
-        <h1 className="text-5xl text-white font-cabin text-center font-extrabold">
-          JULIA COUTO
+        <h1 className="text-5xl uppercase text-white font-cabin text-center font-extrabold">
+          Julia Couto
         </h1>
         <h2 className="text-lg text-white font-opensans text-center">
-          Full Stack Developer
+          {t("position")}
         </h2>
 
         <div className="flex justify-center gap-4 mt-4">
-          <a href="https://github.com/ju-couto" target="_blank" className="hover:scale-110 transition duration-300 ease-in-out">
+          <a
+            href="https://github.com/ju-couto"
+            target="_blank"
+            className="hover:scale-110 transition duration-300 ease-in-out"
+          >
             <Image
               width={50}
               height={50}
@@ -35,7 +42,11 @@ const Home = () => {
               className="size-9"
             />
           </a>
-          <a href="https://www.linkedin.com/in/juliamcouto/" target="_blank" className="hover:scale-110 transition duration-300 ease-in-out">
+          <a
+            href="https://www.linkedin.com/in/juliamcouto/"
+            target="_blank"
+            className="hover:scale-110 transition duration-300 ease-in-out"
+          >
             <Image
               width={50}
               height={50}

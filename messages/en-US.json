@@ -1,0 +1,47 @@
+{
+  "Home": {
+    "position": "Full Stack Developer"
+  },
+  "About": {
+    "title": "About Me",
+    "introduction": "Hello! I'm Julia.",
+    "introductionText": "I'm a FullStack developer passionate about turning ideas into amazing digital solutions. With experience working directly withclients, I have a solid understanding of their needs and expectations, and I'm committed to delivering results that exceed their expectations.",
+    "birthdate": "Birthdate",
+    "birthdateText": "03•04•2000",
+    "phone": "Phone",
+    "myInterests": "My Interests",
+    "music": "Music",
+    "travel": "Travel",
+    "reading": "Read",
+    "family": "Family",
+    "download": "Download CV",
+    "srcPdf": "/cv_en.pdf"
+  },
+  "Contact": {
+    "title": "Contact me",
+    "nameForm": "Name",
+    "subjectForm": "Subject",
+    "messageForm": "Message",
+    "send": "Send",
+    "success": "Message sent successfully!",
+    "sucessText": "Thank you for contacting me. I will respond as soon as possible.",
+    "error": "Oops!",
+    "errorText": "Sorry, an error occurred while sending your message. Please try again later."
+  },
+  "Skills": {
+    "title": "Skills"
+  },
+  "Projects": {
+    "title": "Projects",
+    "emptyTitle": "Pretty Soon",
+    "emptyDescription": "This is an amazing project that will be available soon. Stay tuned to discover a variety of exciting news and features!",
+    "emptyImageSrc": "images/coming-soon.png"
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}

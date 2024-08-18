@@ -1,0 +1,1 @@
+export const languages = ['en-US', 'pt-BR'] 

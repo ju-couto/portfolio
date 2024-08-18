@@ -8,17 +8,19 @@ import {
 import { MdSaveAlt } from "react-icons/md";
 import HobbyCard from "@/components/HobbyCard";
 import useDownloader from "react-use-downloader";
+import { useTranslations } from "next-intl";
 
 const About = () => {
+  const t = useTranslations('About');
   const { download } = useDownloader();
 
-  const fileUrl = "/cv.pdf";
+  const fileUrl = t("srcPdf");
   const filename = "cv.pdf";
   const interests = [
-    { icon: <IoHeadsetOutline className="icon-hobby" />, label: "Music" },
-    { icon: <IoAirplaneOutline className="icon-hobby" />, label: "Travel" },
-    { icon: <IoBookOutline className="icon-hobby" />, label: "Read" },
-    { icon: <IoHeartOutline className="icon-hobby" />, label: "Family" },
+    { icon: <IoHeadsetOutline className="icon-hobby" />, label: t("music") },
+    { icon: <IoAirplaneOutline className="icon-hobby" />, label: t("travel") },
+    { icon: <IoBookOutline className="icon-hobby" />, label: t("reading") },
+    { icon: <IoHeartOutline className="icon-hobby" />, label: t("family") },
   ];
 
   return (
@@ -31,18 +33,14 @@ const About = () => {
           data-aos="fade-down"
           className="flex flex-col items-center justify-center"
         >
-          <h2 className="text-cabin text-4xl md:text-5xl uppercase font-extrabold md:self-start self-center">
-            ABOUT ME
+          <h2 className=" uppercase text-cabin text-4xl md:text-5xl uppercase font-extrabold md:self-start self-center">
+            {t("title")}
           </h2>
           <p className="mt-6 font-opensans text-center md:w-[80%] text-lg">
             <span className="text-purple-light font-bold ">
-              Hello! I&apos;m Julia.
+              {t("introduction")}
             </span>{" "}
-            I&apos;m a FullStack developer passionate about turning ideas into
-            amazing digital solutions. With experience working directly with
-            clients, I have a solid understanding of their needs and
-            expectations, and I&apos;m committed to delivering results that
-            exceed their expectations.
+            {t("introductionText")}
           </p>
         </div>
 
@@ -52,19 +50,19 @@ const About = () => {
             className="grid grid-cols-[auto_auto] gap-1 md:gap-2 lg:gap-3 mt-0 md:mt-10 text-lg"
           >
             <div className="text-purple-light font-bold">
-              <p className="row-start-1">Birthdate:</p>
-              <p className="row-start-2">Phone:</p>
-              <p className="row-start-3">Email:</p>
+              <p className="row-start-1">{t("birthdate")}:</p>
+              <p className="row-start-2">{t("phone")}:</p>
+              <p className="row-start-3">E-mail:</p>
             </div>
             <div>
-              <p className="row-start-1">03•04•2000</p>
+              <p className="row-start-1">{t("birthdateText")}</p>
               <p className="row-start-2">+55 12 98803-8009</p>
               <p className="row-start-3">jcouto.dev@gmail.com</p>
             </div>
           </div>
           <div data-aos="fade-left">
             <h3 className="text-cabin text-3xl md:text-2xl uppercase font-extrabold md:text-start text-center">
-              My Interests
+              {t("myInterests")}
             </h3>
             <div className="flex gap-3 mt-4 md:mx-10 justify-center">
               {interests.map((interest, index) => (
@@ -79,7 +77,7 @@ const About = () => {
             data-aos="fade-up"
             className="cursor-pointer flex gap-2 text-lg border-violet border-2 rounded-md p-3 font-medium hover:bg-purple-blue hover:scale-105 hover:text-white transition-all duration-300 ease-in-out"
           >
-            <span>Download CV</span>
+            <span>{t("download")}</span>
             <MdSaveAlt className="w-6 h-6" />
           </button>
         </div>

@@ -1,7 +1,11 @@
 import React from "react";
 import SkillItem from "@/components/SkillItem";
+import { useTranslations } from "next-intl";
 
 const Skills = () => {
+
+  const t = useTranslations("Skills");
+
   const skillsData = [
     { imgSrc: "/images/icons/html.svg", altText: "html", tooltipText: "HTML" },
     { imgSrc: "/images/icons/css.svg", altText: "css", tooltipText: "CSS" },
@@ -60,7 +64,7 @@ const Skills = () => {
     <div className="bg-purple-darker md:py-[7rem]  text-white section" id="skills">
       <div className="mx-auto w-[80%] flex flex-col items-center">
         <h2 className="text-cabin text-4xl md:text-5xl uppercase font-extrabold" data-aos="fade-down">
-          SKILLS
+          {t("title")}
         </h2>
         <div className="flex flex-wrap justify-center gap-4 mt-10" data-aos="fade-up">
           {skillsData.map((skill, index) => (

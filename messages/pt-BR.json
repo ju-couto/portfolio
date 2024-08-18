@@ -1,0 +1,47 @@
+{
+  "Home": {
+    "position": "Desenvolvedora Full Stack"
+  },
+  "About": {
+    "title": "Sobre Mim",
+    "introduction": "Olá! Eu sou a Julia.",
+    "introductionText": "Sou uma desenvolvedora FullStack apaixonada por transformar ideias em soluções digitais incríveis. Com experiência trabalhando diretamente com clientes, tenho uma compreensão sólida de suas necessidades e expectativas, e estou comprometida em entregar resultados que superem suas expectativas.",
+    "birthdate": "Data de Nascimento",
+    "birthdateText": "04•03•2000",
+    "phone": "Telefone",
+    "myInterests": "Meus Interesses",
+    "music": "Música",
+    "travel": "Viajar",
+    "reading": "Ler",
+    "family": "Família",
+    "download": "Baixar CV",
+    "srcPdf": "/cv_pt.pdf"
+  },
+  "Contact": {
+    "title": "Entre em contato",
+    "nameForm": "Nome",
+    "subjectForm": "Assunto",
+    "messageForm": "Mensagem",
+    "send": "Enviar",
+    "success": "Mensagem enviada com sucesso!",
+    "sucessText": "Obrigada por entrar em contato. Responderei o mais rápido possível.",
+    "error": "Ops!",
+    "errorText": "Desculpe, ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde."
+  },
+  "Skills": {
+    "title": "Habilidades"
+  },
+  "Projects": {
+    "title": "Projetos",
+    "emptyTitle": "Em Breve",
+    "emptyDescription": "Este é um projeto incrível que estará disponível em breve. Fique ligado para descobrir uma variedade de novidades e recursos emocionantes!",
+    "emptyImageSrc": "images/novidade-em-breve.png"
+  },
+  "Navbar": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "contact": "Contato"
+  }
+}
