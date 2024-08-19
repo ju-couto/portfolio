@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { MdRemoveRedEye } from "react-icons/md";
 
@@ -20,7 +21,7 @@ interface ProjectCardProps {
   }: ProjectCardProps) => {
     return (
       <div className="md:w-[22rem] md:h-[26rem] h-[24rem] w-[18rem] relative bg-[#8B56BB] rounded-lg hover:scale-105 transition-all duration-300 ease-in-out group">
-        <img src={imageSrc} alt="" className="rounded-t-md w-full" />
+        <Image src={imageSrc} alt="" className="rounded-t-md w-full" width={604} height={424}  priority />
         <div className="p-4">
           <h3 className="font-opensas text-xl font-bold ">{title}</h3>
           <p className="font-opensas text-sm">{description}</p>
@@ -44,10 +45,12 @@ interface ProjectCardProps {
             )}
             {githubLink && (
               <button className="p-2 rounded-full bg-purple-700 h-fit hover:scale-110  hover:transition-all  hover:duration-300  hover:ease-in-out opacity-70 hover:opacity-100">
-                <img
+                <Image
                   src="/images/icons/github.svg"
                   alt="github"
                   className="size-6"
+                  width={24}
+                  height={24}
                 />
               </button>
             )}

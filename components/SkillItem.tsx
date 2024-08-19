@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface SkillItemProps {
@@ -8,7 +9,7 @@ interface SkillItemProps {
 
 const SkillItem = ({ imgSrc, altText, tooltipText }: SkillItemProps) => (
   <div className="flex flex-col items-center group p-1">
-    <img src={imgSrc} alt={altText} className="md:size-[8rem] size-[6rem]" />
+    <Image src={imgSrc} alt={altText} className="md:size-[8rem] size-[6rem]" width={128} height={128} />
     {tooltipText && (
       <span className="tooltip mt-1 uppercase font-semibold">
         {tooltipText}

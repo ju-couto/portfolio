@@ -35,7 +35,7 @@
     "title": "Projetos",
     "emptyTitle": "Em Breve",
     "emptyDescription": "Este é um projeto incrível que estará disponível em breve. Fique ligado para descobrir uma variedade de novidades e recursos emocionantes!",
-    "emptyImageSrc": "images/novidade-em-breve.png"
+    "emptyImageSrc": "/images/novidade-em-breve.png"
   },
   "Navbar": {
     "home": "Início",

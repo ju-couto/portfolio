@@ -35,7 +35,7 @@
     "title": "Projects",
     "emptyTitle": "Pretty Soon",
     "emptyDescription": "This is an amazing project that will be available soon. Stay tuned to discover a variety of exciting news and features!",
-    "emptyImageSrc": "images/coming-soon.png"
+    "emptyImageSrc": "/images/coming-soon.png"
   },
   "Navbar": {
     "home": "Home",
