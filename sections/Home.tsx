@@ -19,7 +19,7 @@ const Home = () => {
           height={250}
           src="/images/profile.png"
           alt="profile"
-          className="absolute bottom-[10rem] md:bottom-[12rem] rounded-full h-[250px] sm:w-[250px]  border-4 border-fuchsia"
+          className="absolute bottom-[10rem] md:bottom-[10rem] rounded-full h-[250px] sm:w-[250px]  border-4 border-fuchsia"
         />
         <h1 className="text-5xl uppercase text-white font-cabin text-center font-extrabold">
           Julia Couto
