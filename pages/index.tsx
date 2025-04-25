@@ -8,6 +8,7 @@ import Contact from "@/sections/Contact";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { NextSeo } from "next-seo";
 import { GetStaticPropsContext } from "next";
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
@@ -45,28 +46,47 @@ const Index = () => {
     });
   }, []);
   return (
-    <div className="overflow-x-hidden ">
-      <div>
-        {/* Navbar */}
-        <MobileMenu nav={nav} closeMenu={closeMenu} />
-        <Navbar openMenu={openMenu} />
+    <>
+      {/* SEO */}
+      <NextSeo
+        title="Julia Couto - Full Stack Developer"
+        description="Full Stack Developer passionate about creating innovative and efficient solutions using React, Ruby on Rails, Node.js, Python, and more."
 
-        {/* Home Section*/}
-        <Home />
+        additionalMetaTags={[
+          {
+            name: "google-site-verification",
+            content: "Ok-TWguQLx3U9d9yqJ-ReTp9pIe59kUp032tlA2Qk-k",
+          },
+          {
+            name: "keywords",
+            content:
+              "Full Stack Developer, Front End Developer, Web Development, React, Node.js, Ruby on Rails, Python, Julia Couto, Julia Martins",
+          },
+        ]}
+      />
+      <div className="overflow-x-hidden ">
+        <div>
+          {/* Navbar */}
+          <MobileMenu nav={nav} closeMenu={closeMenu} />
+          <Navbar openMenu={openMenu} />
 
-        {/* About Section*/}
-        <About />
+          {/* Home Section*/}
+          <Home />
 
-        {/*Skills Section */}
-        <Skills />
+          {/* About Section*/}
+          <About />
 
-        {/* Projects Section */}
-        <Projects />
+          {/*Skills Section */}
+          <Skills />
 
-        {/* Contact Section */}
-        <Contact />
+          {/* Projects Section */}
+          <Projects />
+
+          {/* Contact Section */}
+          <Contact />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

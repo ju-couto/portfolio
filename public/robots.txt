@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ju-couto.vercel.app/
+
+# Sitemaps
+Sitemap: https://ju-couto.vercel.app/sitemap.xml
