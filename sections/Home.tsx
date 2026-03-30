@@ -7,19 +7,19 @@ const Home = () => {
 
   return (
     <div
-      className="h-[88vh] bg-[url('/images/banner.jpg')] bg-cover bg-center flex items-center justify-center"
+      className="h-[92vh] bg-[url('/images/banner.jpg')] bg-cover bg-center flex items-center justify-center"
       id="home"
     >
       <div
         data-aos="fade-in"
-        className=" relative mt-[8rem]  flex flex-col items-center justify-center bg-purple-dark rounded-3xl md:px-12 pt-[8rem] md:pt-[7rem] px-6 pb-6"
+        className="relative mt-[11rem] flex flex-col items-center justify-center bg-purple-dark rounded-3xl md:px-12 pt-[8rem] md:pt-[7rem] px-6 pb-8"
       >
         <Image
           width={250}
           height={250}
           src="/images/profile.png"
           alt="profile"
-          className="absolute bottom-[10rem] md:bottom-[10rem] rounded-full h-[250px] sm:w-[250px]  border-4 border-fuchsia"
+          className="absolute bottom-[14rem] md:bottom-[15rem] rounded-full h-[250px] sm:w-[250px] border-4 border-fuchsia"
         />
         <h1 className="text-5xl uppercase text-white font-cabin text-center font-extrabold">
           Julia Couto
@@ -54,6 +54,21 @@ const Home = () => {
               alt="linkedin"
               className="size-9"
             />
+          </a>
+        </div>
+
+        <div className="flex gap-4 mt-6">
+          <a
+            href="#projects"
+            className="text-white border-2 border-violet rounded-md px-5 py-2 font-opensans font-medium text-sm hover:bg-purple-blue hover:scale-105 transition-all duration-300 ease-in-out"
+          >
+            {t("ctaProjects")}
+          </a>
+          <a
+            href="#contact"
+            className="text-white bg-violet rounded-md px-5 py-2 font-opensans font-medium text-sm hover:bg-purple-blue hover:scale-105 transition-all duration-300 ease-in-out"
+          >
+            {t("ctaContact")}
           </a>
         </div>
       </div>

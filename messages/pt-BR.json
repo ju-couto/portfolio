@@ -1,21 +1,17 @@
 {
   "Home": {
-    "position": "Desenvolvedora Full Stack"
+    "position": "Desenvolvedora Full Stack",
+    "ctaProjects": "Ver projetos",
+    "ctaContact": "Entre em contato"
   },
   "About": {
     "title": "Sobre Mim",
     "introduction": "Olá! Eu sou a Julia.",
-    "introductionText": "Sou uma desenvolvedora FullStack apaixonada por transformar ideias em soluções digitais incríveis. Com experiência trabalhando diretamente com clientes, tenho uma compreensão sólida de suas necessidades e expectativas, e estou comprometida em entregar resultados que superem suas expectativas.",
-    "birthdate": "Data de Nascimento",
-    "birthdateText": "04•03•2000",
-    "phone": "Telefone",
-    "myInterests": "Meus Interesses",
-    "music": "Música",
-    "travel": "Viajar",
-    "reading": "Ler",
-    "family": "Família",
+    "introductionText": "Desenvolvedora Full Stack com mais de 4 anos de experiência e uma atenção genuína por interfaces que fazem sentido para quem usa. Meu trabalho vive na interseção entre código e produto: escrevo lógica de negócio tanto quanto penso em hierarquia visual, e raramente consigo separar as duas coisas.",
+    "paragraphTwo": "Ao longo dos anos, desenvolvi uma visão ampla do ciclo de produto — o que me permite tomar decisões técnicas com contexto real, não só especificações.",
+    "paragraphThree": "Hoje incorporo IA no meu fluxo de trabalho — com ferramentas como Claude AI e Cursor — não para substituir o raciocínio, mas para amplificar a entrega com mais qualidade e velocidade.",
     "download": "Baixar CV",
-    "srcPdf": "/cv_pt.pdf"
+    "srcPdf": "/cv_portugues.pdf"
   },
   "Contact": {
     "title": "Entre em contato",
@@ -23,13 +19,18 @@
     "subjectForm": "Assunto",
     "messageForm": "Mensagem",
     "send": "Enviar",
+    "sending": "Enviando",
     "success": "Mensagem enviada com sucesso!",
     "sucessText": "Obrigada por entrar em contato. Responderei o mais rápido possível.",
     "error": "Ops!",
     "errorText": "Desculpe, ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde."
   },
   "Skills": {
-    "title": "Habilidades"
+    "title": "Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend & Banco de Dados",
+    "tools": "Ferramentas",
+    "ai": "Inteligência Artificial"
   },
   "Projects": {
     "title": "Projetos",
@@ -42,6 +43,36 @@
     "about": "Sobre",
     "skills": "Habilidades",
     "projects": "Projetos",
-    "contact": "Contato"
+    "contact": "Contato",
+    "experience": "Experiência"
+  },
+  "Experience": {
+  "title": "Experiência",
+  "exp1": {
+    "role": "Engenheira de Software Full Stack",
+    "company": "InHire",
+    "period": "Set 2024 - Presente",
+    "b1": "Desenvolvimento de funcionalidades com foco em usabilidade, acessibilidade e performance",
+    "b2": "Otimização de performance com React Query e buscas eficientes com Typesense/Algolia",
+    "b3": "Entrega de fluxos estratégicos com impacto em OKRs, aumentando adoção mensal (transferência de candidatos, cancelamento de propostas e automações)",
+    "b4": "Uso contínuo de IA (Claude, Cursor) para ganho de produtividade, qualidade de código e velocidade de entrega"
+  },
+  "exp2": {
+    "role": "Desenvolvedora Full Stack Pleno",
+    "company": "CUBi Energia",
+    "period": "Mar 2024 - Ago 2024",
+    "b1": "Atualização do React e dependências, melhorando performance e estabilidade",
+    "b2": "Implementação de download em massa com React, Koa.js, AWS Lambda e S3",
+    "b3": "Manutenção e evolução de integração com API de faturamento"
+  },
+  "exp3": {
+    "role": "Desenvolvedora Web",
+    "company": "Simbiose Ventures",
+    "period": "Jan 2022 - Fev 2024",
+    "b1": "Migração de plataforma low-code para arquitetura escalável com Vue.js e Python",
+    "b2": "Desenvolvimento de marketplace com Ruby on Rails e JavaScript",
+    "b3": "Contribuição em projetos com React, melhorando performance e consistência de UI",
+    "b4": "Mentoria de desenvolvedores frontend júnior"
   }
+}
 }

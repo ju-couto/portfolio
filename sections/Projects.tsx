@@ -15,7 +15,7 @@ const Projects = () => {
 
   return (
     <div
-      className="bg-purple-darkest md:py-[9rem]  text-white justify-center section"
+      className="bg-purple-darker md:py-[9rem]  text-white justify-center section"
       id="projects"
     >
       <div className="flex flex-col items-center mx-0  justify-center w-[80%] ">

@@ -1,21 +1,17 @@
 {
   "Home": {
-    "position": "Full Stack Developer"
+    "position": "Full Stack Developer",
+    "ctaProjects": "View projects",
+    "ctaContact": "Get in touch"
   },
   "About": {
     "title": "About Me",
-    "introduction": "Hello! I'm Julia.",
-    "introductionText": "I'm a FullStack developer passionate about turning ideas into amazing digital solutions. With experience working directly withclients, I have a solid understanding of their needs and expectations, and I'm committed to delivering results that exceed their expectations.",
-    "birthdate": "Birthdate",
-    "birthdateText": "03•04•2000",
-    "phone": "Phone",
-    "myInterests": "My Interests",
-    "music": "Music",
-    "travel": "Travel",
-    "reading": "Read",
-    "family": "Family",
+    "introduction": "Hi! I'm Julia.",
+    "introductionText": "Full Stack Developer with over 4 years of experience and a genuine attention to interfaces that actually make sense for the people using them. My work lives at the intersection of code and product: I write business logic just as much as I think about visual hierarchy — and I rarely manage to separate the two.",
+    "paragraphTwo": "Over the years, I've developed a broad understanding of the product cycle — which allows me to make technical decisions grounded in real context, not just specifications.",
+    "paragraphThree": "Today I incorporate AI into my workflow — using tools like Claude AI and Cursor — not to replace thinking, but to amplify delivery with more quality and speed.",
     "download": "Download CV",
-    "srcPdf": "/cv_en.pdf"
+    "srcPdf": "/cv_english.pdf"
   },
   "Contact": {
     "title": "Contact me",
@@ -23,13 +19,18 @@
     "subjectForm": "Subject",
     "messageForm": "Message",
     "send": "Send",
+    "sending": "Sending",
     "success": "Message sent successfully!",
     "sucessText": "Thank you for contacting me. I will respond as soon as possible.",
     "error": "Oops!",
     "errorText": "Sorry, an error occurred while sending your message. Please try again later."
   },
   "Skills": {
-    "title": "Skills"
+    "title": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend & Database",
+    "tools": "Tools",
+     "ai": "Artificial Intelligence"
   },
   "Projects": {
     "title": "Projects",
@@ -42,6 +43,36 @@
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "experience": "Experience"
+  },
+  "Experience": {
+  "title": "Experience",
+  "exp1": {
+    "role": "Full Stack Software Engineer",
+    "company": "InHire",
+    "period": "Sep 2024 - Present",
+    "b1": "Built user-facing features with strong focus on usability, accessibility, and performance",
+    "b2": "Improved application performance using React Query and implemented high-speed search with Typesense/Algolia",
+    "b3": "Delivered core product workflows impacting company OKRs, increasing monthly adoption (candidate transfer, offer cancellation, automated candidate rejection flows)",
+    "b4": "Leveraged AI tools (Claude, Cursor) daily to boost productivity, code quality, and delivery speed"
+  },
+  "exp2": {
+    "role": "Mid-level Full Stack Developer",
+    "company": "CUBi Energia",
+    "period": "Mar 2024 - Aug 2024",
+    "b1": "Led React and dependency upgrades, improving performance and long-term maintainability",
+    "b2": "Designed and implemented a bulk file download feature using React, Koa.js, AWS Lambda, and S3",
+    "b3": "Maintained and enhanced billing API integrations for energy and water invoicing"
+  },
+  "exp3": {
+    "role": "Web Developer",
+    "company": "Simbiose Ventures",
+    "period": "Jan 2022 - Feb 2024",
+    "b1": "Migrated a low-code platform to a scalable architecture using Vue.js and Python",
+    "b2": "Developed a service marketplace using Ruby on Rails and JavaScript",
+    "b3": "Contributed to React-based internal products, improving UI consistency and performance",
+    "b4": "Mentored junior frontend developers through code reviews and technical guidance"
   }
+}
 }
